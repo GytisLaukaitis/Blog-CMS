@@ -9,6 +9,7 @@ https://github.com/GytisLaukaitis/Blog-CMS.git
 ```
 $ cd laravel-7-blog-cms
 $ composer install
+$ php artisan ui bootstrap --auth
 $ npm install
 $ npm run dev
 ```

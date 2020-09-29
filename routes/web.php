@@ -30,22 +30,3 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('pages', 'PageController');
     Route::resource('galleries', 'GalleryController');
 });
-
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

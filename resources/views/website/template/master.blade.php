@@ -28,26 +28,21 @@
             color: #00657b;
             text-align: center;
         }
-
         .page-item.active .page-link {
             background-color: #00657b;
             border-color: #00657b;
         }
-
         .category-list {
             padding: 0;
             margin: 0;
         }
-
         .category-list li {
             list-style: none;
         }
-
         .category-title {
             margin-top: 30px;
             margin-bottom: 10px;
         }
-
         .post-category a {
             text-decoration: none;
         }

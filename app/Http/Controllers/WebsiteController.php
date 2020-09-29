@@ -8,6 +8,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Response;
 
 class WebsiteController extends Controller
 {
@@ -24,7 +25,7 @@ class WebsiteController extends Controller
         if ($post) {
             return view('website.post', compact('post'));
         } else {
-            return \Response::view('website.errors.404', array(), 404);
+            return Response::view('website.errors.404', array(), 404);
         }
     }
 
@@ -35,7 +36,7 @@ class WebsiteController extends Controller
             $posts = $category->posts()->orderBy('posts.id', 'DESC')->where('is_published', '1')->paginate(5);
             return view('website.category', compact('category', 'posts'));
         } else {
-            return \Response::view('website.errors.404', array(), 404);
+            return Response::view('website.errors.404', array(), 404);
         }
     }
 
@@ -45,7 +46,7 @@ class WebsiteController extends Controller
         if ($page) {
             return view('website.page', compact('page'));
         } else {
-            return \Response::view('website.errors.404', array(), 404);
+            return Response::view('website.errors.404', array(), 404);
         }
     }
 
@@ -63,7 +64,7 @@ class WebsiteController extends Controller
             'message' => $request->message,
         ];
 
-        Mail::to('youremailaddress.@gmail.com')->send(new VisitorContact($data));
+        Mail::to('gytislaukaitis@gmail.com')->send(new VisitorContact($data));
 
         Session::flash('message', 'Thank you for your email');
         return redirect()->route('contact.show');

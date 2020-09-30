@@ -52,7 +52,7 @@ DB_PASSWORD=
 
 $ docker-compose up -d
 $ docker ps   (to find ID of a project)
-$ docker exec - it (project ID) bash
+$ docker exec -it (project ID) bash
 $ composer install
 
 If you run into errors

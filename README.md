@@ -38,6 +38,21 @@ $ factory(App\CategoryPost::class, 100)->create();
 $ php artisan storage:link
 ```
 
+## Use Docker
+```
+$ docker-compose up -d
+$ docker ps   (to find ID of a project)
+$ docker exec - it (project ID) bash
+$ composer install
+
+If you run into errors
+
+$ php artisan route:clear
+$ php artisan config:clear
+$ php artisan cache:clear
+
+Run migrations
+
 ## Mail setup 
 ```
 visit at : https://mailtrap.io/

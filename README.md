@@ -40,6 +40,16 @@ $ php artisan storage:link
 
 ## Use Docker
 ```
+Config your .env file to
+
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laraapp_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+
 $ docker-compose up -d
 $ docker ps   (to find ID of a project)
 $ docker exec - it (project ID) bash

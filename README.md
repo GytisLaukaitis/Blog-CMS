@@ -62,9 +62,10 @@ $ php artisan config:clear
 $ php artisan cache:clear
 
 Run migrations
+```
 
 ## Mail setup 
-```
+
 visit at : https://mailtrap.io/
 put mail credentials in .env file
 ```
